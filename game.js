@@ -69,7 +69,9 @@ function init() {
     });
 
     // Create walls
-    const ground = Bodies.rectangle(GAME_WIDTH / 2, GAME_HEIGHT + WALL_THICKNESS / 2 - 10, GAME_WIDTH, WALL_THICKNESS, { isStatic: true, render: { fillStyle: '#555' } });
+    // Raise ground by 100px to avoid mobile UI overlap
+    const groundY = GAME_HEIGHT - 100 + WALL_THICKNESS / 2 - 10;
+    const ground = Bodies.rectangle(GAME_WIDTH / 2, groundY, GAME_WIDTH, WALL_THICKNESS, { isStatic: true, render: { fillStyle: '#555' } });
     const leftWall = Bodies.rectangle(0 - WALL_THICKNESS / 2, GAME_HEIGHT / 2, WALL_THICKNESS, GAME_HEIGHT * 2, { isStatic: true, render: { fillStyle: '#555' } });
     const rightWall = Bodies.rectangle(GAME_WIDTH + WALL_THICKNESS / 2, GAME_HEIGHT / 2, WALL_THICKNESS, GAME_HEIGHT * 2, { isStatic: true, render: { fillStyle: '#555' } });
 
