@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Merge Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="score-board">Score: <span id="score">0</span></div>
+            <div id="next-block-container">
+                Next: <div id="next-block-preview"></div>
+            </div>
+            <div id="stats-container">
+                <div>Colors: <span id="color-count">4</span>/8</div>
+                <div id="timer-container" class="hidden">Auto Drop: <span id="timer">3.0</span>s</div>
+            </div>
+            <div id="notification" class="hidden"></div>
+            <div id="tutorial-overlay">
+                <h1>Block Merge</h1>
+                <div class="tutorial-content">
+                    <p>1. Click to drop blocks.</p>
+                    <p>2. <strong>Same colors</strong> merge into larger blocks.</p>
+                    <p>3. Unlock new colors every 200 points.</p>
+                    <p>4. Watch out for the <strong>Black Hole</strong> (Size 15)!</p>
+                    <p>5. Don't let the stack reach the top!</p>
+                </div>
+                <button id="start-btn">Start Game</button>
+            </div>
+            <div id="game-over" class="hidden">
+                <h1>GAME OVER</h1>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Restart</button>
+            </div>
+        </div>
+        <!-- Canvas will be injected here by Matter.js or we can specify it -->
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
