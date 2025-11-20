@@ -3,10 +3,13 @@ body {
     padding: 0;
     overflow: hidden;
     background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     touch-action: none;
     /* Prevent pull-to-refresh on mobile */
+    width: 100vw;
+    height: 100svh;
+    /* Use Small Viewport Height to avoid address bar overlap */
     padding-bottom: env(safe-area-inset-bottom);
     /* iOS Safe Area */
     padding-top: env(safe-area-inset-top);
