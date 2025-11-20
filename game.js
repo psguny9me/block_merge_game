@@ -309,7 +309,7 @@ function updateScore(points) {
     if (targetCount > activeColorCount) {
         activeColorCount = targetCount;
         updateStatsUI();
-        showNotification(`New Color Unlocked! (${activeColorCount}/8)`);
+        showNotification(`새로운 색상 잠금 해제! (${activeColorCount}/8)`);
     }
 }
 
@@ -328,7 +328,7 @@ function getAutoDropInterval() {
 }
 
 function updateStatsUI() {
-    colorCountEl.textContent = activeColorCount;
+    colorCountEl.textContent = `색상: ${activeColorCount}/8`;
     if (activeColorCount >= 8) {
         timerContainerEl.classList.remove('hidden');
     } else {

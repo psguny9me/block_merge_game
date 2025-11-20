@@ -12,30 +12,27 @@
 <body>
     <div id="game-container">
         <div id="ui-layer">
-            <div id="score-board">Score: <span id="score">0</span></div>
-            <div id="next-block-container">
-                Next: <div id="next-block-preview"></div>
+            <div id="score-board">점수: <span id="score">0</span></div>
+            <div id="next-block-container">다음: <div id="next-block-preview"></div>
             </div>
             <div id="stats-container">
-                <div>Colors: <span id="color-count">4</span>/8</div>
-                <div id="timer-container" class="hidden">Auto Drop: <span id="timer">3.0</span>s</div>
+                <div id="color-count">색상: 4/8</div>
+                <div id="timer-container" class="hidden">자동 드랍: <span id="timer">10.0</span>s</div>
             </div>
-            <div id="notification" class="hidden"></div>
+            <div id="notification" class="hidden">알림</div>
             <div id="tutorial-overlay">
-                <h1>Block Merge</h1>
+                <h2>게임 방법</h2>
                 <div class="tutorial-content">
-                    <p>1. Click to drop blocks.</p>
-                    <p>2. <strong>Same colors</strong> merge into larger blocks.</p>
-                    <p>3. Unlock new colors every 200 points.</p>
-                    <p>4. Watch out for the <strong>Black Hole</strong> (Size 15)!</p>
-                    <p>5. Don't let the stack reach the top!</p>
+                    <p>클릭하거나 터치하여 블록을 떨어뜨리세요.</p>
+                    <p>같은 색깔을 합쳐서 더 크게 만드세요.</p>
+                    <p>블록이 너무 높이 쌓이지 않게 주의하세요!</p>
                 </div>
-                <button id="start-btn">Start Game</button>
+                <button id="start-btn">게임 시작</button>
             </div>
             <div id="game-over" class="hidden">
-                <h1>GAME OVER</h1>
-                <p>Final Score: <span id="final-score">0</span></p>
-                <button id="restart-btn">Restart</button>
+                <h1>게임 종료</h1>
+                <p>최종 점수: <span id="final-score">0</span></p>
+                <button id="restart-btn">다시 하기</button>
             </div>
         </div>
         <!-- Canvas will be injected here by Matter.js or we can specify it -->
